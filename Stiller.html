@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stiller Sealcoating | Greenwood &amp; Indianapolis Metro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:ital,wght@0,500;0,600;0,700;1,700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0d0d0d;
+    --black-2:#161616;
+    --gold:#d4a017;
+    --gold-bright:#e8b923;
+    --white:#ffffff;
+    --gray:#a3a099;
+    --line:#2a2a28;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--black);
+    color:var(--white);
+    font-family:'Montserrat',sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Montserrat',sans-serif;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:0.02em;
+  }
+  .brand-font{
+    font-family:'Rajdhani',sans-serif;
+    font-weight:700;
+    font-style:italic;
+  }
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+
+  /* subtle asphalt texture */
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(255,255,255,0.015) 0, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(255,255,255,0.02) 0, transparent 45%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  /* ===== NAV ===== */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(13,13,13,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:16px 24px;max-width:1080px;margin:0 auto;
+  }
+  .logo-mark{display:flex;flex-direction:column;line-height:1;}
+  .logo-mark .stiller{
+    font-family:'Rajdhani',sans-serif;font-weight:700;font-style:italic;
+    color:var(--white);font-size:22px;letter-spacing:0.01em;
+  }
+  .logo-mark .seal{
+    font-family:'Montserrat',sans-serif;font-weight:600;font-size:9px;
+    letter-spacing:0.32em;color:var(--white);margin-top:1px;
+  }
+  .nav-cta{
+    border:1.5px solid var(--gold);color:var(--gold);
+    padding:9px 18px;font-size:13px;font-weight:600;
+    letter-spacing:0.08em;text-transform:uppercase;
+    font-family:'Montserrat',sans-serif;
+    transition:all .2s ease;
+  }
+  .nav-cta:hover{background:var(--gold);color:var(--black);}
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;
+    padding:100px 24px 90px;
+    text-align:center;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;left:50%;top:-120px;
+    width:900px;height:900px;transform:translateX(-50%);
+    background:radial-gradient(circle, rgba(212,160,23,0.08) 0%, transparent 65%);
+    pointer-events:none;
+  }
+  .hero-wordmark{
+    position:relative;z-index:1;display:flex;flex-direction:column;
+    align-items:center;margin-bottom:34px;
+  }
+  .hero-wordmark .frame{
+    position:relative;
+    border-top:2px solid var(--gold);border-bottom:2px solid var(--gold);
+    padding:22px 44px 16px;
+  }
+  .hero-wordmark .frame::before,.hero-wordmark .frame::after{
+    content:"";position:absolute;top:0;bottom:0;width:2px;background:var(--gold);
+  }
+  .hero-wordmark .frame::before{left:0;top:0;height:40%;}
+  .hero-wordmark .frame::after{right:0;bottom:0;height:40%;}
+  .hero-wordmark .stiller-big{
+    font-family:'Rajdhani',sans-serif;font-weight:700;font-style:italic;
+    font-size:clamp(38px,7vw,64px);color:var(--white);line-height:1;text-align:center;
+    letter-spacing:0.01em;
+  }
+  .hero-wordmark .seal-big{
+    font-family:'Montserrat',sans-serif;font-weight:600;
+    font-size:clamp(12px,1.8vw,17px);letter-spacing:0.42em;
+    color:var(--white);text-align:center;margin-top:6px;
+  }
+  .hero-wordmark .tagline{
+    font-family:'Montserrat',sans-serif;font-weight:700;
+    font-size:12px;letter-spacing:0.28em;color:var(--gold);
+    margin-top:18px;
+  }
+  .eyebrow{
+    color:var(--gold);font-size:13px;font-weight:600;
+    letter-spacing:0.25em;font-family:'Montserrat',sans-serif;
+    margin-bottom:22px;position:relative;z-index:1;
+  }
+  .hero h1{
+    font-size:clamp(34px,6vw,64px);
+    font-weight:700;line-height:1.08;color:var(--white);
+    max-width:820px;margin:0 auto 22px;position:relative;z-index:1;
+  }
+  .hero h1 em{font-style:normal;color:var(--gold-bright);}
+  .hero p.sub{
+    color:var(--gray);font-size:17px;max-width:520px;margin:0 auto 38px;
+    position:relative;z-index:1;
+  }
+  .hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;}
+  .btn-primary,.btn-secondary{
+    font-family:'Montserrat',sans-serif;font-weight:600;font-size:14px;
+    letter-spacing:0.08em;text-transform:uppercase;
+    padding:16px 30px;transition:all .2s ease;
+  }
+  .btn-primary{background:var(--gold);color:var(--black);border:1.5px solid var(--gold);}
+  .btn-primary:hover{background:var(--gold-bright);border-color:var(--gold-bright);}
+  .btn-secondary{border:1.5px solid var(--line);color:var(--white);}
+  .btn-secondary:hover{border-color:var(--gold);color:var(--gold);}
+
+  .offer-strip{
+    margin-top:56px;border:1px solid var(--gold);
+    display:inline-flex;align-items:center;gap:10px;
+    padding:12px 26px;position:relative;z-index:1;
+  }
+  .offer-strip span{font-size:13px;color:var(--gray);letter-spacing:0.03em;}
+  .offer-strip strong{color:var(--gold-bright);font-weight:600;}
+
+  /* ===== TRUST BAR ===== */
+  .trust-bar{
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:22px 0;
+  }
+  .trust-bar .wrap{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:36px;
+  }
+  .trust-bar .item{
+    font-family:'Montserrat',sans-serif;font-size:12.5px;
+    letter-spacing:0.1em;text-transform:uppercase;color:var(--gray);
+    display:flex;align-items:center;gap:8px;
+  }
+  .trust-bar .item::before{content:"";width:5px;height:5px;background:var(--gold);display:inline-block;}
+
+  /* ===== SECTION HEADS ===== */
+  .section{padding:90px 24px;position:relative;z-index:1;}
+  .section-head{text-align:center;max-width:600px;margin:0 auto 56px;}
+  .section-head .eyebrow{margin-bottom:14px;}
+  .section-head h2{font-size:clamp(26px,4vw,40px);color:var(--white);}
+
+  /* ===== SERVICES ===== */
+  .services-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:1px;background:var(--line);border:1px solid var(--line);
+  }
+  .service-card{
+    background:var(--black);padding:34px 28px;
+  }
+  .service-card .num{
+    font-family:'Montserrat',sans-serif;color:var(--gold);font-size:13px;
+    letter-spacing:0.1em;margin-bottom:16px;display:block;
+  }
+  .service-card h3{font-size:19px;color:var(--white);margin-bottom:10px;font-weight:600;}
+  .service-card p{color:var(--gray);font-size:14.5px;}
+
+  /* ===== PROCESS ===== */
+  .process{background:var(--black-2);}
+  .process-list{max-width:680px;margin:0 auto;}
+  .process-item{
+    display:flex;gap:24px;padding:26px 0;border-bottom:1px solid var(--line);
+  }
+  .process-item:last-child{border-bottom:none;}
+  .process-item .step{
+    font-family:'Montserrat',sans-serif;color:var(--gold);font-size:15px;
+    font-weight:600;min-width:32px;
+  }
+  .process-item h4{font-size:17px;font-weight:600;margin-bottom:6px;color:var(--white);}
+  .process-item p{color:var(--gray);font-size:14.5px;}
+
+  /* ===== REFERRAL BLOCK ===== */
+  .referral{
+    text-align:center;border:1px solid var(--gold);
+    max-width:720px;margin:0 auto;padding:52px 32px;
+  }
+  .referral h2{font-size:clamp(24px,3.5vw,32px);color:var(--white);margin-bottom:14px;}
+  .referral p{color:var(--gray);font-size:15.5px;max-width:460px;margin:0 auto 30px;}
+
+  /* ===== SERVICE AREA ===== */
+  .area-tags{
+    display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:620px;margin:0 auto;
+  }
+  .area-tags span{
+    border:1px solid var(--line);color:var(--gray);
+    font-size:13px;padding:9px 16px;font-family:'Montserrat',sans-serif;
+    letter-spacing:0.04em;
+  }
+
+  /* ===== FOOTER / CONTACT ===== */
+  footer{
+    border-top:1px solid var(--line);padding:70px 24px 40px;text-align:center;
+  }
+  footer h2{font-size:clamp(26px,4vw,38px);margin-bottom:16px;}
+  footer p.sub{color:var(--gray);margin-bottom:34px;}
+  .contact-line{
+    font-family:'Montserrat',sans-serif;font-size:clamp(28px,5vw,40px);
+    font-weight:600;color:var(--gold-bright);letter-spacing:0.02em;margin-bottom:8px;
+    display:inline-block;transition:color .2s ease;
+  }
+  .contact-line:hover{color:var(--white);}
+  .footer-meta{
+    margin-top:50px;padding-top:26px;border-top:1px solid var(--line);
+    color:var(--gray);font-size:12.5px;letter-spacing:0.04em;
+  }
+
+  @media (max-width:640px){
+    .hero{padding:80px 20px 70px;}
+    .section{padding:64px 20px;}
+    nav .word{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo-mark">
+      <div class="stiller">STILLER</div>
+      <div class="seal">SEALCOATING</div>
+    </div>
+    <a href="tel:4632619621" class="nav-cta">Free Quote</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-wordmark">
+    <div class="frame">
+      <div class="stiller-big">STILLER</div>
+      <div class="seal-big">SEALCOATING</div>
+    </div>
+    <div class="tagline">PROTECT. PRESERVE. PERFORM.</div>
+  </div>
+  <div class="eyebrow">GREENWOOD &amp; INDIANAPOLIS METRO</div>
+  <h1>Your driveway called.<br>It's cracking <em>under pressure.</em></h1>
+  <p class="sub">Professional sealcoating that protects your asphalt from cracking, fading, and water damage &mdash; done right, done in a day.</p>
+  <div class="hero-ctas">
+    <a href="tel:4632619621" class="btn-primary">Get a Free Quote</a>
+    <a href="#services" class="btn-secondary">See What We Do</a>
+  </div>
+  <div class="offer-strip">
+    <span><strong>Free crack filling</strong> with every seal coat &mdash; this month only</span>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="wrap">
+    <div class="item">Locally Owned</div>
+    <div class="item">Free Estimates</div>
+    <div class="item">Fully Insured</div>
+    <div class="item">Same-Day Quotes</div>
+  </div>
+</div>
+
+<section class="section" id="services">
+  <div class="section-head">
+    <div class="eyebrow">WHAT WE DO</div>
+    <h2>Protect. Preserve. Perform.</h2>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="num">01</span>
+      <h3>Driveway Sealcoating</h3>
+      <p>Residential driveways sealed and protected against Indiana's freeze-thaw cycles.</p>
+    </div>
+    <div class="service-card">
+      <span class="num">02</span>
+      <h3>Crack Filling &amp; Repair</h3>
+      <p>Cracks filled before they spread &mdash; included free with every seal coat this month.</p>
+    </div>
+    <div class="service-card">
+      <span class="num">03</span>
+      <h3>Small Commercial Lots</h3>
+      <p>Strip malls, offices, and small business lots kept clean and professional.</p>
+    </div>
+    <div class="service-card">
+      <span class="num">04</span>
+      <h3>HOA &amp; Multi-Family</h3>
+      <p>Neighborhood and community lots maintained on a predictable schedule.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section process">
+  <div class="section-head">
+    <div class="eyebrow">HOW IT WORKS</div>
+    <h2>From quote to cured in days, not weeks</h2>
+  </div>
+  <div class="process-list">
+    <div class="process-item">
+      <div class="step">01</div>
+      <div><h4>Text or call for a free quote</h4><p>Send a photo of your driveway or lot &mdash; most jobs are quoted same day.</p></div>
+    </div>
+    <div class="process-item">
+      <div class="step">02</div>
+      <div><h4>We schedule around your week</h4><p>Weekday and weekend slots available. We work around your schedule, not ours.</p></div>
+    </div>
+    <div class="process-item">
+      <div class="step">03</div>
+      <div><h4>One-day application</h4><p>Cracks filled, surface sealed, and cleaned up before we leave &mdash; most jobs done in a single day.</p></div>
+    </div>
+    <div class="process-item">
+      <div class="step">04</div>
+      <div><h4>Cured and protected by the weekend</h4><p>We'll text you photos of the finished job and care instructions while it cures.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="referral" style="margin-left:auto;margin-right:auto;">
+    <div class="eyebrow" style="text-align:center;">REFERRAL PROGRAM</div>
+    <h2>Send a neighbor, save $25</h2>
+    <p>Know someone whose driveway needs work? You get $25 off and they get $25 off when they book their first seal coat with us.</p>
+    <a href="#quote" class="btn-primary">Refer a Neighbor</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div class="eyebrow">SERVICE AREA</div>
+    <h2>Serving the Indianapolis metro</h2>
+  </div>
+  <div class="area-tags">
+    <span>Greenwood</span>
+    <span>Indianapolis</span>
+    <span>Franklin</span>
+    <span>Bargersville</span>
+    <span>Whiteland</span>
+    <span>Center Grove</span>
+    <span>Southport</span>
+  </div>
+</section>
+
+<footer id="quote">
+  <div class="eyebrow">GET YOUR FREE QUOTE</div>
+  <h2>Ready to protect your driveway?</h2>
+  <p class="sub">Text or call for a same-day quote. Most driveways scheduled within the week.</p>
+  <a href="tel:4632619621" class="contact-line">463-261-9621</a>
+  <p class="sub" style="margin-bottom:0;">stillersealcoating.com &nbsp;&bull;&nbsp; <a href="mailto:Devon@StillerSealcoating.com" style="border-bottom:1px solid var(--line);">Devon@StillerSealcoating.com</a></p>
+
+  <div class="footer-meta">
+    &copy; 2026 Stiller Sealcoating. Locally owned &amp; operated in Greenwood, Indiana.
+  </div>
+</footer>
+
+</body>
+</html>
