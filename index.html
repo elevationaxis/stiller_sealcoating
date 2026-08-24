@@ -76,15 +76,7 @@
     display:flex;align-items:center;justify-content:space-between;
     padding:16px 24px;max-width:1080px;margin:0 auto;
   }
-  .logo-mark{display:flex;flex-direction:column;line-height:1;}
-  .logo-mark .stiller{
-    font-family:'Rajdhani',sans-serif;font-weight:700;font-style:italic;
-    color:var(--white);font-size:22px;letter-spacing:0.01em;
-  }
-  .logo-mark .seal{
-    font-family:'Montserrat',sans-serif;font-weight:600;font-size:9px;
-    letter-spacing:0.32em;color:var(--white);margin-top:1px;
-  }
+  .nav-logo{height:38px;width:auto;display:block;}
   .nav-cta{
     border:1.5px solid var(--gold);color:var(--gold);
     padding:9px 18px;font-size:13px;font-weight:600;
@@ -112,30 +104,8 @@
     position:relative;z-index:1;display:flex;flex-direction:column;
     align-items:center;margin-bottom:34px;
   }
-  .hero-wordmark .frame{
-    position:relative;
-    border-top:2px solid var(--gold);border-bottom:2px solid var(--gold);
-    padding:22px 44px 16px;
-  }
-  .hero-wordmark .frame::before,.hero-wordmark .frame::after{
-    content:"";position:absolute;top:0;bottom:0;width:2px;background:var(--gold);
-  }
-  .hero-wordmark .frame::before{left:0;top:0;height:40%;}
-  .hero-wordmark .frame::after{right:0;bottom:0;height:40%;}
-  .hero-wordmark .stiller-big{
-    font-family:'Rajdhani',sans-serif;font-weight:700;font-style:italic;
-    font-size:clamp(38px,7vw,64px);color:var(--white);line-height:1;text-align:center;
-    letter-spacing:0.01em;
-  }
-  .hero-wordmark .seal-big{
-    font-family:'Montserrat',sans-serif;font-weight:600;
-    font-size:clamp(12px,1.8vw,17px);letter-spacing:0.42em;
-    color:var(--white);text-align:center;margin-top:6px;
-  }
-  .hero-wordmark .tagline{
-    font-family:'Montserrat',sans-serif;font-weight:700;
-    font-size:12px;letter-spacing:0.28em;color:var(--gold);
-    margin-top:18px;
+  .hero-logo{
+    width:100%;max-width:520px;height:auto;
   }
   .eyebrow{
     color:var(--gold);font-size:13px;font-weight:600;
@@ -270,21 +240,14 @@
 
 <header>
   <nav>
-    <div class="logo-mark">
-      <div class="stiller">STILLER</div>
-      <div class="seal">SEALCOATING</div>
-    </div>
+    <img src="stiller-logo.png" alt="Stiller Sealcoating" class="nav-logo">
     <a href="tel:4632619621" class="nav-cta">Free Quote</a>
   </nav>
 </header>
 
 <section class="hero">
   <div class="hero-wordmark">
-    <div class="frame">
-      <div class="stiller-big">STILLER</div>
-      <div class="seal-big">SEALCOATING</div>
-    </div>
-    <div class="tagline">PROTECT. PRESERVE. PERFORM.</div>
+    <img src="stiller-logo.png" alt="Stiller Sealcoating — Protect. Preserve. Perform." class="hero-logo">
   </div>
   <div class="eyebrow">CAMBY, MONROVIA &amp; MOORESVILLE, IN</div>
   <h1>Your driveway called.<br>It's cracking <em>under pressure.</em></h1>
