@@ -50,8 +50,11 @@
       Prefer to call or text? Reach us directly at <a href="tel:4632619621">463-261-9621</a>.
     </div>
 
-    <!-- This form needs a submission backend (e.g. Formspree, Netlify Forms) connected before launch. -->
-    <form class="estimate-form" action="#" method="POST">
+    <!-- Netlify Forms: submissions appear in Netlify > Forms. Enable email notifications in Netlify site settings. -->
+    <form class="estimate-form" name="estimate" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data">
+      <input type="hidden" name="form-name" value="estimate">
+      <input type="hidden" name="subject" value="New Stiller Sealcoating estimate request">
+      <p style="display:none" aria-hidden="true"><label>Leave this field blank <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
       <div class="form-row">
         <div class="field">
           <label for="name">Full Name</label>
